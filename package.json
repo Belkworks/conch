@@ -10,7 +10,9 @@
   "types": "out/index.d.ts",
   "files": [
     "out",
-    "!**/*.tsbuildinfo"
+    "!**/*.tsbuildinfo",
+    "default.project.json",
+    "standalone.rbxm"
   ],
   "publishConfig": {
     "access": "public",
