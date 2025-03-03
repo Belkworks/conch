@@ -12,7 +12,11 @@ type AnalysisInformation = {};
 
 type Type<T> = {};
 
-declare interface Conch {
+interface UI {
+	bind_to: (input: Enum.KeyCode | Enum.UserInputType) => void;
+}
+
+interface Conch {
 	execute: (src: string) => void;
 
 	register_quick: (name: string, fn: (...args: any[]) => any, ...permissions: Permission[]) => void;
@@ -73,6 +77,8 @@ declare interface Conch {
 
 		enum_new: <T extends string>(...values: T[]) => Type<T>;
 	};
+
+	ui: UI;
 }
 
 declare const conch: Conch;
