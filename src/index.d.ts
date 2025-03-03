@@ -12,6 +12,8 @@ type AnalysisInformation = {};
 
 type Type<T> = {};
 
+type ExcludeSuperUser<T extends string> = T extends "super-user" ? never : T;
+
 interface UI {
 	bind_to: (input: Enum.KeyCode | Enum.UserInputType) => void;
 }
@@ -45,7 +47,7 @@ interface Conch {
 
 	has_permissions: (user: User, ...permissions: Permission[]) => boolean;
 
-	set_role_permissions: (role: string, ...permissions: string[]) => void;
+	set_role_permissions: <T extends string>(role: ExcludeSuperUser<T>, ...permissions: Permission[]) => void;
 
 	give_roles: (user: User, ...roles: Role[]) => void;
 
