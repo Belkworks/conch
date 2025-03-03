@@ -1,6 +1,9 @@
 {
 	"name": "conch",
 	"tree": {
-		"$path": "standalone.rbxm"
+		"$className": "Folder",
+		"out": {
+			"$path": "standalone.rbxm"
+		}
 	}
 }
