@@ -1,0 +1,31 @@
+{
+  "name": "@belkworks/conch",
+  "version": "0.0.0",
+  "scripts": {
+    "build": "rbxtsc",
+    "watch": "rbxtsc -w",
+    "prepublishOnly": "pnpm run build"
+  },
+  "packageManager": "pnpm@10.4.1",
+  "types": "out/index.d.ts",
+  "files": [
+    "out",
+    "!**/*.tsbuildinfo"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@rbxts/compiler-types": "3.0.0-types.0",
+    "@rbxts/types": "^1.0.839",
+    "@typescript-eslint/eslint-plugin": "^8.25.0",
+    "@typescript-eslint/parser": "^8.25.0",
+    "eslint": "^9.21.0",
+    "eslint-config-prettier": "^10.0.2",
+    "eslint-plugin-prettier": "^5.2.3",
+    "eslint-plugin-roblox-ts": "^0.0.36",
+    "prettier": "^3.5.3",
+    "roblox-ts": "^3.0.0",
+    "typescript": "^5.8.2"
+  }
+}
