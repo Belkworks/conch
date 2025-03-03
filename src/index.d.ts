@@ -1,5 +1,4 @@
 export as namespace Conch;
-export = Conch;
 
 type Permission = string;
 
@@ -75,3 +74,6 @@ declare interface Conch {
 		enum_new: <T extends string>(...values: T[]) => Type<T>;
 	};
 }
+
+declare const conch: Conch;
+export = conch;
